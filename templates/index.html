@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Nombres</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FastAPI</h1>
+      <h2>Buscador de Nombres</h2>
+      <input
+        type="text"
+        id="filtro"
+        placeholder="Filtrar nombres: Ej. Juan ó an"
+      />
+      <button onclick="obtenerNombres()">Buscar</button>
+    </header>
+
+    <h2>Todos los Nombres</h2>
+    <ul id="nombres-lista"></ul>
+
+    <h2>Nombres Filtrados</h2>
+    <ul id="nombres-filtrados"></ul>
+
+    <script src="/static/script.js"></script>
+    <script>
+      // Llamar a la función para cargar todos los nombres al inicio
+      document.addEventListener("DOMContentLoaded", obtenerNombres);
+    </script>
+  </body>
+</html>
